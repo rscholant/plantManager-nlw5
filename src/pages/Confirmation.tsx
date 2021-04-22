@@ -1,8 +1,8 @@
 import React from "react";
 import { SafeAreaView, View, Text, StyleSheet } from "react-native";
 import { Button } from "../components/Button";
-import colors from "../../styles/colors";
-import fonts from "../../styles/fonts";
+import colors from "../styles/colors";
+import fonts from "../styles/fonts";
 export function Confirmation() {
   return (
     <SafeAreaView style={styles.container}>

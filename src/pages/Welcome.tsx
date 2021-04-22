@@ -8,8 +8,8 @@ import {
   Dimensions,
   View,
 } from "react-native";
-import colors from "../../styles/colors";
-import fonts from "../../styles/fonts";
+import colors from "../styles/colors";
+import fonts from "../styles/fonts";
 import wateringImg from "../assets/watering.png";
 import { Feather } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/core";

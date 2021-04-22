@@ -11,8 +11,8 @@ import {
   Platform,
   Keyboard,
 } from "react-native";
-import colors from "../../styles/colors";
-import fonts from "../../styles/fonts";
+import colors from "../styles/colors";
+import fonts from "../styles/fonts";
 import { Button } from "../components/Button";
 export function UserIdentification() {
   const navigation = useNavigation();
