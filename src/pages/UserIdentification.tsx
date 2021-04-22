@@ -10,10 +10,13 @@ import {
   TouchableWithoutFeedback,
   Platform,
   Keyboard,
+  Alert,
 } from "react-native";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { Button } from "../components/Button";
+
 import colors from "../styles/colors";
 import fonts from "../styles/fonts";
-import { Button } from "../components/Button";
 export function UserIdentification() {
   const navigation = useNavigation();
   const [isFocused, setIsFocused] = useState(false);
@@ -31,7 +34,13 @@ export function UserIdentification() {
     setName(value);
   }
 
-  function handleSubmit() {
+  async function handleSubmit() {
+    if (!name) return Alert.alert("Me diz como chamar você 😢");
+    try {
+      await AsyncStorage.setItem("@plantmanager:user", name);
+    } catch {
+      Alert.alert("Não foi possivel salvar o seu nome 😢");
+    }
     navigation.navigate("Confirmation");
   }
 
