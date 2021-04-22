@@ -1,12 +1,22 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
+import colors from "../styles/colors";
 
 function PlantSelect() {
   return (
-    <View>
+    <View style={styles.container}>
       <Text>Selecionar Planta</Text>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: colors.background,
+  },
+});
 
 export default PlantSelect;
